@@ -10,9 +10,7 @@ namespace NHibernate.Model
     {
         public BookMap()
         {
-            Id(x => x.Id)
-                .Column("Id")
-                .GeneratedBy.Guid();
+            Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Title);
             Map(x => x.AuthorFirstName);
             Map(x => x.AuthorLastName);
